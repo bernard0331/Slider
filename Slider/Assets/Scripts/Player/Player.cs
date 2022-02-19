@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float moveSpeed = 5;
     private float moveSpeedMultiplier = 1;
     private bool canMove = true;
-
+    private bool isMoving = false;
 
     private InputSettings controls;
     private Vector3 lastMoveDir;
@@ -135,5 +135,9 @@ public class Player : MonoBehaviour
     public static void setMoveSpeedMultiplier(float x)
     {
         _instance.moveSpeedMultiplier = x;
+    }
+
+    public bool isPlayerMoving() {
+        return isMoving;
     }
 }
